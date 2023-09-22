@@ -1,0 +1,20 @@
+version = 1
+
+[[analyzers]]
+name = "docker"
+
+[[analyzers]]
+name = "shell"
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "github.com/philipjonsen/awm-relayer"
+  dependencies_vendored = true
+
+[[transformers]]
+name = "gofmt"
+
+[[transformers]]
+name = "gofumpt"
