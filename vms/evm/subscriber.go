@@ -33,10 +33,8 @@ const (
 	MaxBlocksToProcess          = 200
 )
 
-var (
-	// Errors
-	ErrInvalidLog = errors.New("invalid warp message log")
-)
+// Errors
+var ErrInvalidLog = errors.New("invalid warp message log")
 
 // The filter query used to match logs emitted by the Warp precompile
 var warpFilterQuery = interfaces.FilterQuery{

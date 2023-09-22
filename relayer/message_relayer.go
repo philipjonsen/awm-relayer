@@ -423,7 +423,8 @@ func (r *messageRelayer) getCurrentCanonicalValidatorSet() ([]*warp.Validator, u
 // If we are unable to generate the signature or verify correctly, false will be returned to indicate no valid signature was found in response.
 func (r *messageRelayer) isValidSignatureResponse(
 	response message.InboundMessage,
-	pubKey *bls.PublicKey) (blsSignatureBuf, bool) {
+	pubKey *bls.PublicKey,
+) (blsSignatureBuf, bool) {
 	// If the handler returned an error response, count the response and continue
 	if response.Op() == message.AppRequestFailedOp {
 		r.logger.Debug(
