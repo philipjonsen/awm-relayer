@@ -153,7 +153,8 @@ func (m *messageManager) messageDelivered(
 	destinationClient vms.DestinationClient,
 	warpMessageInfo *vmtypes.WarpMessageInfo,
 	teleporterMessage *TeleporterMessage,
-	destinationChainID ids.ID) (bool, error) {
+	destinationChainID ids.ID,
+) (bool, error) {
 	// Check if the message has already been delivered to the destination chain
 	client, ok := destinationClient.Client().(ethclient.Client)
 	if !ok {

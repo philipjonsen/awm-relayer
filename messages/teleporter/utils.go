@@ -15,9 +15,7 @@ const (
 	receiveMessageGasLimitBufferAmount = 100_000
 )
 
-var (
-	errRequiredGasLimitTooHigh = errors.New("required gas limit too high")
-)
+var errRequiredGasLimitTooHigh = errors.New("required gas limit too high")
 
 // CalculateReceiveMessageGasLimit calculates the estimated gas amount used by a single call
 // to receiveCrossChainMessage for the given message and validator bit vector. The result amount

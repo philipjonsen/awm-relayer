@@ -345,6 +345,7 @@ func TestGetRelayerAccountPrivateKey_set_pk_with_subnet_env(t *testing.T) {
 	}
 	runGetRelayerAccountPrivateKeyTest(t, testCase)
 }
+
 func TestGetRelayerAccountPrivateKey_set_pk_with_global_env(t *testing.T) {
 	testCase := getRelayerAccountPrivateKeyTestCase{
 		baseConfig: testValidConfig,

@@ -98,7 +98,8 @@ func NewDestinationClient(logger logging.Logger, subnetInfo config.DestinationSu
 func (c *destinationClient) SendTx(signedMessage *avalancheWarp.Message,
 	toAddress string,
 	gasLimit uint64,
-	callData []byte) error {
+	callData []byte,
+) error {
 	// Synchronize teleporter message requests to the same destination chain so that message ordering is preserved
 	c.lock.Lock()
 	defer c.lock.Unlock()

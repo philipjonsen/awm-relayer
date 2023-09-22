@@ -27,9 +27,7 @@ const (
 	cChainIdentifierString      = "C"
 )
 
-var (
-	ErrInvalidPrivateKey = errors.New("failed to set private key string")
-)
+var ErrInvalidPrivateKey = errors.New("failed to set private key string")
 
 type MessageProtocolConfig struct {
 	MessageFormat string                 `mapstructure:"message-format" json:"message-format"`
@@ -275,7 +273,7 @@ func (s *DestinationSubnet) Validate() error {
 }
 
 func constructURL(protocol string, host string, port uint32, encrypt bool, chainIDStr string, subnetIDStr string) string {
-	var protocolPathMap = map[string]string{
+	protocolPathMap := map[string]string{
 		"http": "rpc",
 		"ws":   "ws",
 	}
